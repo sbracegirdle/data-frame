@@ -1,0 +1,11 @@
+{% extends "layout.html" %} {% block title %}About{% endblock %} {% block
+content %} {% if complete %}
+<p>Thank you for your feedback!</p>
+{% else %}
+<form action="/feedback">
+  <label for="feedback">Feedback:</label>
+  <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+{% endif %} {% endblock %}

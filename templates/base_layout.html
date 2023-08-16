@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <script src="/static/data-frame.js"></script>
+  </head>
+  <body>
+    <h1>DataFrame</h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/feedback">Send feedback</a></li>
+    </ul>
+    <div>
+      <data-frame push="true" default="true">
+        {% block content %}{% endblock %}
+      </data-frame>
+    </div>
+  </body>
+</html>
